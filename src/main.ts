@@ -72,9 +72,11 @@ const calPerPerson = (e: any) => {
     if (numOfPerson !== 0) {
       const totalPerson = priceTip / numOfPerson;
       const tipPerson = (priceTip - totalPrice) / numOfPerson;
+      if (tipPerPerson && totalPerPerson) {
+        tipPerPerson.innerText = tipPerson.toString();
+        totalPerPerson.innerText = totalPerson.toString();
+      }
 
-      tipPerPerson.innerText = tipPerson.toString();
-      totalPerPerson.innerText = totalPerson.toString();
       clearError();
     } else {
       handdleError();
