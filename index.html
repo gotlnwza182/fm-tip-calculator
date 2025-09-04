@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body class="bg-grey-200 min-h-screen content-center">
+    <img src="/images/logo.svg" alt="logo" class="mx-auto my-12" />
+    <article
+      class="bg-white max-w-94 rounded-t-3xl mx-auto px-6 py-8 md:max-w-152 md:px-20 md:py-12 md:rounded-3xl xl:max-w-230 xl:p-8"
+    >
+      <div class="grid grid-cols-1 gap-8 xl:grid-cols-2">
+        <div>
+          <div>
+            <label for="price" class="text-preset-5 text-grey-500">Bill</label>
+            <input
+              id="price"
+              name="price"
+              type="number"
+              placeholder="0"
+              class="w-full mt-2 text-preset-3 text-green-900 focus:outline-green-400 no-spinner bg-[url(/images/icon-dollar.svg)] text-end bg-no-repeat bg-position-[5%_center] px-4 py-2 bg-grey-50 rounded-sm"
+            />
+          </div>
+
+          <div class="my-8 xl:my-10">
+            <div class="flex flex-col">
+              <label class="text-preset-5 text-grey-500 mb-2"
+                >Select Tip %</label
+              ><span id="tipErr" class="text-preset-5 text-orange-400 hidden"
+                >Please enter the total price first.</span
+              >
+            </div>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
+              <button
+                type="button"
+                class="btn text-preset-3 hover:cursor-pointer"
+                value="5"
+              >
+                5%
+              </button>
+              <button
+                type="button"
+                class="btn text-preset-3 hover:cursor-pointer"
+                value="10"
+              >
+                10%
+              </button>
+              <button
+                type="button"
+                class="btn text-preset-3 hover:cursor-pointer"
+                value="15"
+              >
+                15%
+              </button>
+              <button
+                type="button"
+                class="btn text-preset-3 hover:cursor-pointer"
+                value="25"
+              >
+                25%
+              </button>
+              <button
+                type="button"
+                class="btn text-preset-3 hover:cursor-pointer"
+                value="50"
+              >
+                50%
+              </button>
+              <input
+                type="number"
+                id="customBtn"
+                placeholder="Custom"
+                class="w-37 text-center no-spinner rounded-md bg-grey-50 text-grey-550 text-preset-3 focus:outline-green-400 hover:cursor-pointer hover:placeholder:text-grey-550 focus:placeholder-transparent xl:w-29"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between">
+              <label for="personCount" class="text-preset-5 text-grey-500"
+                >Number of People</label
+              >
+              <span id="errTxt" class="text-preset-5 text-orange-400 hidden"
+                >Can’t be zero</span
+              >
+            </div>
+            <p id="errFirstTxt" class="text-preset-5 text-orange-400 hidden">
+              Please enter the total price and select the tip first.
+            </p>
+
+            <input
+              id="personCount"
+              name="personCount"
+              type="number"
+              placeholder="0"
+              class="w-full mt-2 text-preset-3 text-green-900 focus:outline-green-400 no-spinner bg-[url(/images/icon-person.svg)] text-end bg-no-repeat bg-position-[5%_center] px-4 py-2 bg-grey-50 rounded-sm"
+            />
+          </div>
+        </div>
+
+        <div
+          class="bg-green-900 p-6 rounded-2xl flex flex-col justify-between md:px-8"
+        >
+          <div>
+            <div class="flex justify-between items-center">
+              <div class="text-white">
+                <h2 class="text-preset-5">Tip Amount</h2>
+                <span class="text-preset-6 text-grey-400">/ person</span>
+              </div>
+              <p class="text-green-400 text-preset-2 md:text-preset-1">
+                $<span id="tipPerPerson">0.00</span>
+              </p>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="text-white">
+                <h2 class="text-preset-5">Total</h2>
+                <span class="text-preset-6 text-grey-400">/ person</span>
+              </div>
+              <p class="text-green-400 text-preset-2 md:text-preset-1">
+                $<span id="totalPerPerson">0.00</span>
+              </p>
+            </div>
+          </div>
+          <button
+            id="resetBtn"
+            type="reset"
+            class="uppercase bg-green-750 w-full rounded-md text-preset-4 text-green-800 py-2 mt-8 hover:bg-green-200 hover:cursor-pointer"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+    </article>
+    <div class="text-center mt-2 text-preset-6">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        class="text-blue-500 visited:text-purple-500"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="#" target="_blank" class="text-blue-500 visited:text-purple-500"
+        >Your Name Here</a
+      >.
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

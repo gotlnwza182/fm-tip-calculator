@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-space-mono: "Space Mono", monospace;
+
+  --color-grey-50: #f3f9fa;
+  --color-grey-200: #c5e4e7;
+  --color-grey-300: #9ebbbd;
+  --color-grey-400: #7f9d9f;
+  --color-grey-500: #5e7a7d;
+  --color-grey-550: #547878;
+  --color-grey-600: #3d6666;
+
+  --color-green-200: #9fe8df;
+  --color-green-400: #26c2ae;
+  --color-green-750: #0d686d;
+  --color-green-800: #085c61;
+  --color-green-900: #00474b;
+
+  --color-orange-400: #e17052;
+}
+
+@utility text-preset-1 {
+  font-size: 48px;
+  line-height: 71px;
+  letter-spacing: -1px;
+  font-family: var(--font-space-mono);
+  font-weight: 700;
+}
+@utility text-preset-2 {
+  font-size: 32px;
+  line-height: 47px;
+  letter-spacing: -0.67px;
+  font-family: var(--font-space-mono);
+  font-weight: 700;
+}
+@utility text-preset-3 {
+  font-size: 24px;
+  line-height: 36px;
+  font-family: var(--font-space-mono);
+  font-weight: 700;
+}
+@utility text-preset-4 {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: var(--font-space-mono);
+  font-weight: 700;
+}
+@utility text-preset-5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--font-space-mono);
+  font-weight: 700;
+}
+@utility text-preset-6 {
+  font-size: 13px;
+  line-height: 19px;
+  font-family: var(--font-space-mono);
+  font-weight: 700;
+}
+
+@utility btn {
+  color: white;
+  background-color: var(--color-green-900);
+  border-radius: 5px;
+  width: 147px;
+  height: 48px;
+  @variant hover {
+    background-color: var(--color-green-400);
+    color: var(--color-green-900);
+  }
+  @variant active {
+    background-color: var(--color-green-400);
+    color: var(--color-green-900);
+  }
+
+  @media (min-width: 1280px) {
+    width: 116px;
+  }
+}
+
+@utility no-spinner {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+}
