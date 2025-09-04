@@ -38,7 +38,7 @@ const handleChange = (e: any) => {
   clearError();
 };
 
-const calculate = (e) => {
+const calculate = (e: any) => {
   if (totalPrice > 0) {
     const percentTip = parseInt(e.target.value);
     priceTip = totalPrice + (totalPrice * percentTip) / 100;
@@ -57,7 +57,7 @@ percentBtns.forEach((button) => {
   button.addEventListener("click", calculate);
 });
 
-customBtn?.addEventListener("change", (e) => {
+customBtn?.addEventListener("change", (e: any) => {
   const customTip = parseInt(e.target.value);
   if (customTip >= 0) {
     priceTip = totalPrice + (totalPrice * customTip) / 100;
@@ -66,15 +66,15 @@ customBtn?.addEventListener("change", (e) => {
   }
 });
 
-const calPerPerson = (e) => {
+const calPerPerson = (e: any) => {
   numOfPerson = parseInt(e.target.value);
   if (totalPrice > 0 && priceTip > 0) {
     if (numOfPerson !== 0) {
       const totalPerson = priceTip / numOfPerson;
       const tipPerson = (priceTip - totalPrice) / numOfPerson;
 
-      tipPerPerson.innerText = tipPerson;
-      totalPerPerson.innerText = totalPerson;
+      tipPerPerson.innerText = tipPerson.toString();
+      totalPerPerson.innerText = totalPerson.toString();
       clearError();
     } else {
       handdleError();
